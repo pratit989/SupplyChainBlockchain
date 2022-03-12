@@ -5,7 +5,6 @@ import '../login/login_widget.dart';
 import '../login_copy/login_copy_widget.dart';
 import '../login_copy_copy/login_copy_copy_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePageWidget extends StatefulWidget {
@@ -17,20 +16,6 @@ class HomePageWidget extends StatefulWidget {
 
 class _HomePageWidgetState extends State<HomePageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  @override
-  void initState() {
-    super.initState();
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      await Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => LoginWidget(),
-        ),
-      );
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
