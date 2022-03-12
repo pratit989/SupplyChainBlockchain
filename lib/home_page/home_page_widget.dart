@@ -147,7 +147,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      'Select App Language:',
+                      FFLocalizations.of(context).getText(
+                        '0gllf474' /* Select App Language: */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodyText1,
                     ),
                     Padding(

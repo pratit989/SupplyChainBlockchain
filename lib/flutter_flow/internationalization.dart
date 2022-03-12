@@ -56,7 +56,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Buyer',
       'hi': 'क्रेता',
     },
-    '2jphwi18': {
+    '0gllf474': {
       'en': 'Select App Language:',
       'hi': '',
     },
@@ -66,7 +66,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ygds3pda': {
       'en': 'Hindi',
-      'hi': '',
+      'hi': 'हिन्दी',
     },
     'b5t8ffeo': {
       'en': 'Home',
