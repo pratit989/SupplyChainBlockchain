@@ -54,7 +54,9 @@ class _LoginCopyCopyWidgetState extends State<LoginCopyCopyWidget> {
                       controller: textController1,
                       obscureText: false,
                       decoration: InputDecoration(
-                        hintText: 'Name',
+                        hintText: FFLocalizations.of(context).getText(
+                          'tl6cidog' /* Name */,
+                        ),
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0x00000000),
@@ -100,7 +102,9 @@ class _LoginCopyCopyWidgetState extends State<LoginCopyCopyWidget> {
                       controller: textController2,
                       obscureText: !passwordVisibility,
                       decoration: InputDecoration(
-                        hintText: 'Password',
+                        hintText: FFLocalizations.of(context).getText(
+                          '7w1wwb9h' /* Password */,
+                        ),
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0x00000000),
@@ -155,7 +159,9 @@ class _LoginCopyCopyWidgetState extends State<LoginCopyCopyWidget> {
                       ),
                     );
                   },
-                  text: 'Login',
+                  text: FFLocalizations.of(context).getText(
+                    'ez5xdox4' /* Login */,
+                  ),
                   options: FFButtonOptions(
                     width: 130,
                     height: 40,
@@ -175,7 +181,9 @@ class _LoginCopyCopyWidgetState extends State<LoginCopyCopyWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                 child: Text(
-                  'Sign up if you aren\'t a registered user',
+                  FFLocalizations.of(context).getText(
+                    'q4wgo1en' /* Sign up if you aren't a regist... */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Open Sans',
                         color: Colors.black,

@@ -55,7 +55,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                       controller: textController1,
                       obscureText: false,
                       decoration: InputDecoration(
-                        hintText: 'Name',
+                        hintText: FFLocalizations.of(context).getText(
+                          'jeeb30ks' /* Name */,
+                        ),
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0x00000000),
@@ -101,7 +103,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                       controller: textController2,
                       obscureText: !passwordVisibility,
                       decoration: InputDecoration(
-                        hintText: 'Password',
+                        hintText: FFLocalizations.of(context).getText(
+                          'd1cj5iit' /* Password */,
+                        ),
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0x00000000),
@@ -156,7 +160,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                     );
                   },
-                  text: 'Login',
+                  text: FFLocalizations.of(context).getText(
+                    '09fbilrd' /* Login */,
+                  ),
                   options: FFButtonOptions(
                     width: 130,
                     height: 40,
@@ -176,7 +182,9 @@ class _LoginWidgetState extends State<LoginWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                 child: Text(
-                  'Sign up if you aren\'t a registered user',
+                  FFLocalizations.of(context).getText(
+                    'yg82zymg' /* Sign up if you aren't a regist... */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Open Sans',
                         color: Colors.black,

@@ -47,7 +47,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         );
                       },
-                      text: 'Seller',
+                      text: FFLocalizations.of(context).getText(
+                        'qen02gzg' /* Seller */,
+                      ),
                       options: FFButtonOptions(
                         width: 130,
                         height: 40,
@@ -82,7 +84,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         );
                       },
-                      text: 'Certifier',
+                      text: FFLocalizations.of(context).getText(
+                        '4lkhsymy' /* Certifier */,
+                      ),
                       options: FFButtonOptions(
                         width: 130,
                         height: 40,
@@ -115,7 +119,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         ),
                       );
                     },
-                    text: 'Buyer',
+                    text: FFLocalizations.of(context).getText(
+                      'pzrntfsv' /* Buyer */,
+                    ),
                     options: FFButtonOptions(
                       width: 130,
                       height: 40,

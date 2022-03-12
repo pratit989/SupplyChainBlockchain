@@ -22,12 +22,30 @@ class _CertifierInfoWidgetState extends State<CertifierInfoWidget> {
   @override
   void initState() {
     super.initState();
-    textController1 = TextEditingController(text: 'Swara');
-    textController2 = TextEditingController(text: '8657268017');
-    textController3 = TextEditingController(text: 'Swara.321@gmail.com');
-    textController4 = TextEditingController(text: 'Seven Seas Road, Chembur');
-    textController5 = TextEditingController(text: 'GSTIN0000023');
-    textController6 = TextEditingController(text: 'MADAR4487F');
+    textController1 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      '935fjx3u' /* Swara */,
+    ));
+    textController2 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      '7jc6wsby' /* 8657268017 */,
+    ));
+    textController3 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      '06agggun' /* Swara.321@gmail.com */,
+    ));
+    textController4 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      'fk22r2rx' /* Seven Seas Road, Chembur */,
+    ));
+    textController5 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      'hk8jxcpp' /* GSTIN0000023 */,
+    ));
+    textController6 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      'ioh4lz3b' /* MADAR4487F */,
+    ));
   }
 
   @override
@@ -38,7 +56,9 @@ class _CertifierInfoWidgetState extends State<CertifierInfoWidget> {
         backgroundColor: Colors.black,
         automaticallyImplyLeading: true,
         title: Text(
-          'Certifier Info.',
+          FFLocalizations.of(context).getText(
+            '39qjp8a2' /* Certifier Info. */,
+          ),
           style: FlutterFlowTheme.of(context).bodyText1.override(
                 fontFamily: 'Open Sans',
                 color: Colors.white,
@@ -74,7 +94,9 @@ class _CertifierInfoWidgetState extends State<CertifierInfoWidget> {
                     controller: textController1,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'Name',
+                      labelText: FFLocalizations.of(context).getText(
+                        '50khufej' /* Name */,
+                      ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.black,
@@ -110,7 +132,9 @@ class _CertifierInfoWidgetState extends State<CertifierInfoWidget> {
                     controller: textController2,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'Phone Number',
+                      labelText: FFLocalizations.of(context).getText(
+                        '3j1gm5fe' /* Phone Number */,
+                      ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.black,
@@ -146,7 +170,9 @@ class _CertifierInfoWidgetState extends State<CertifierInfoWidget> {
                     controller: textController3,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'E mail',
+                      labelText: FFLocalizations.of(context).getText(
+                        'zahdwoa8' /* E mail */,
+                      ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.black,
@@ -182,7 +208,9 @@ class _CertifierInfoWidgetState extends State<CertifierInfoWidget> {
                     controller: textController4,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'Address',
+                      labelText: FFLocalizations.of(context).getText(
+                        'w3e9jiut' /* Address */,
+                      ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.black,
@@ -218,7 +246,9 @@ class _CertifierInfoWidgetState extends State<CertifierInfoWidget> {
                     controller: textController5,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'UID',
+                      labelText: FFLocalizations.of(context).getText(
+                        'tz8phbk1' /* UID */,
+                      ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.black,
@@ -254,7 +284,9 @@ class _CertifierInfoWidgetState extends State<CertifierInfoWidget> {
                     controller: textController6,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'PAN Number',
+                      labelText: FFLocalizations.of(context).getText(
+                        '0pntxm5v' /* PAN Number */,
+                      ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.black,

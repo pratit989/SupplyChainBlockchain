@@ -22,12 +22,30 @@ class _SellerinfoWidgetState extends State<SellerinfoWidget> {
   @override
   void initState() {
     super.initState();
-    textController1 = TextEditingController(text: 'Arpit');
-    textController2 = TextEditingController(text: '1234567890');
-    textController3 = TextEditingController(text: 'arpit.123@gmail.com');
-    textController4 = TextEditingController(text: 'Rose Villa , Chembur');
-    textController5 = TextEditingController(text: 'GSTIN0000023');
-    textController6 = TextEditingController(text: 'DJYPG0706F');
+    textController1 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      'k2bjgdd0' /* Arpit */,
+    ));
+    textController2 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      'mvjdxf9c' /* 1234567890 */,
+    ));
+    textController3 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      'x7yam4xl' /* arpit.123@gmail.com */,
+    ));
+    textController4 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      '3ijlilu2' /* Rose Villa , Chembur */,
+    ));
+    textController5 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      'ca8gqs66' /* GSTIN0000023 */,
+    ));
+    textController6 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      '2e70a6ao' /* DJYPG0706F */,
+    ));
   }
 
   @override
@@ -38,7 +56,9 @@ class _SellerinfoWidgetState extends State<SellerinfoWidget> {
         backgroundColor: Colors.black,
         automaticallyImplyLeading: true,
         title: Text(
-          'Seller Info.',
+          FFLocalizations.of(context).getText(
+            'da3dpro0' /* Seller Info. */,
+          ),
           style: FlutterFlowTheme.of(context).bodyText1.override(
                 fontFamily: 'Open Sans',
                 color: Colors.white,
@@ -74,7 +94,9 @@ class _SellerinfoWidgetState extends State<SellerinfoWidget> {
                     controller: textController1,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'Name',
+                      labelText: FFLocalizations.of(context).getText(
+                        '3lpew2al' /* Name */,
+                      ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.black,
@@ -110,7 +132,9 @@ class _SellerinfoWidgetState extends State<SellerinfoWidget> {
                     controller: textController2,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'Phone Number',
+                      labelText: FFLocalizations.of(context).getText(
+                        'qrv7em1v' /* Phone Number */,
+                      ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.black,
@@ -146,7 +170,9 @@ class _SellerinfoWidgetState extends State<SellerinfoWidget> {
                     controller: textController3,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'E mail',
+                      labelText: FFLocalizations.of(context).getText(
+                        'jko632ry' /* E mail */,
+                      ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.black,
@@ -182,7 +208,9 @@ class _SellerinfoWidgetState extends State<SellerinfoWidget> {
                     controller: textController4,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'Address',
+                      labelText: FFLocalizations.of(context).getText(
+                        '3m3flxdz' /* Address */,
+                      ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.black,
@@ -218,7 +246,9 @@ class _SellerinfoWidgetState extends State<SellerinfoWidget> {
                     controller: textController5,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'GST Number',
+                      labelText: FFLocalizations.of(context).getText(
+                        '4s5u7f4y' /* GST Number */,
+                      ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.black,
@@ -254,7 +284,9 @@ class _SellerinfoWidgetState extends State<SellerinfoWidget> {
                     controller: textController6,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'PAN Number',
+                      labelText: FFLocalizations.of(context).getText(
+                        '8qbbxngw' /* PAN Number */,
+                      ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.black,

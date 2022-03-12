@@ -22,13 +22,30 @@ class _BuyerInfoWidgetState extends State<BuyerInfoWidget> {
   @override
   void initState() {
     super.initState();
-    textController1 = TextEditingController(text: 'Pratit');
-    textController2 = TextEditingController(text: '0987654321');
-    textController3 = TextEditingController(text: 'pratit.321@gmail.com');
-    textController4 =
-        TextEditingController(text: 'Central Avenue Road, Chembur');
-    textController5 = TextEditingController(text: 'GSTIN0000023');
-    textController6 = TextEditingController(text: 'AZCPT0536D');
+    textController1 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      'g33s1c45' /* Pratit */,
+    ));
+    textController2 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      'msx1anwx' /* 0987654321 */,
+    ));
+    textController3 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      'ufqm8hp7' /* pratit.321@gmail.com */,
+    ));
+    textController4 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      'ymsem740' /* Central Avenue Road, Chembur */,
+    ));
+    textController5 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      '517dh5k4' /* GSTIN0000023 */,
+    ));
+    textController6 = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      'i2n248tx' /* AZCPT0536D */,
+    ));
   }
 
   @override
@@ -39,7 +56,9 @@ class _BuyerInfoWidgetState extends State<BuyerInfoWidget> {
         backgroundColor: Colors.black,
         automaticallyImplyLeading: true,
         title: Text(
-          'Buyer Info.',
+          FFLocalizations.of(context).getText(
+            'azr4w65d' /* Buyer Info. */,
+          ),
           style: FlutterFlowTheme.of(context).bodyText1.override(
                 fontFamily: 'Open Sans',
                 color: Colors.white,
@@ -78,7 +97,9 @@ class _BuyerInfoWidgetState extends State<BuyerInfoWidget> {
                         controller: textController1,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Name',
+                          labelText: FFLocalizations.of(context).getText(
+                            'ma38j3sz' /* Name */,
+                          ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Colors.black,
@@ -114,7 +135,9 @@ class _BuyerInfoWidgetState extends State<BuyerInfoWidget> {
                         controller: textController2,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Phone Number',
+                          labelText: FFLocalizations.of(context).getText(
+                            'mxy66haq' /* Phone Number */,
+                          ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Colors.black,
@@ -150,7 +173,9 @@ class _BuyerInfoWidgetState extends State<BuyerInfoWidget> {
                         controller: textController3,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'E mail',
+                          labelText: FFLocalizations.of(context).getText(
+                            '6g8zevyq' /* E mail */,
+                          ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Colors.black,
@@ -186,7 +211,9 @@ class _BuyerInfoWidgetState extends State<BuyerInfoWidget> {
                         controller: textController4,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Address',
+                          labelText: FFLocalizations.of(context).getText(
+                            'qfekre6v' /* Address */,
+                          ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Colors.black,
@@ -222,7 +249,9 @@ class _BuyerInfoWidgetState extends State<BuyerInfoWidget> {
                         controller: textController5,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'GST Number',
+                          labelText: FFLocalizations.of(context).getText(
+                            'pqfxi1ia' /* GST Number */,
+                          ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Colors.black,
@@ -258,7 +287,9 @@ class _BuyerInfoWidgetState extends State<BuyerInfoWidget> {
                         controller: textController6,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'PAN Number',
+                          labelText: FFLocalizations.of(context).getText(
+                            'k5oq0h7h' /* PAN Number */,
+                          ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Colors.black,
