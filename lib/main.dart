@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:blockchain_supply_chain/home_page/home_page_widget.dart';
+import 'package:blockchain_supply_chain/login/login_widget.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
@@ -61,7 +61,7 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
             )
-          : HomePageWidget(),
+          : LoginWidget(),
     );
   }
 }
