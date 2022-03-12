@@ -30,6 +30,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             children: [
               Image.asset(
                 'assets/images/pngwing.com.png',
+                width: MediaQuery.of(context).size.width * 0.9,
                 fit: BoxFit.cover,
               ),
               Row(
@@ -139,6 +140,75 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                   ),
                 ],
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Text(
+                      'Select App Language:',
+                      style: FlutterFlowTheme.of(context).bodyText1,
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          FFButtonWidget(
+                            onPressed: () async {
+                              setAppLanguage(context, 'en');
+                            },
+                            text: FFLocalizations.of(context).getText(
+                              'hmkp2zk0' /* English */,
+                            ),
+                            options: FFButtonOptions(
+                              width: 100,
+                              height: 30,
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .subtitle2
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                  ),
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 1,
+                              ),
+                              borderRadius: 12,
+                            ),
+                          ),
+                          FFButtonWidget(
+                            onPressed: () async {
+                              setAppLanguage(context, 'hi');
+                            },
+                            text: FFLocalizations.of(context).getText(
+                              'ygds3pda' /* Hindi */,
+                            ),
+                            options: FFButtonOptions(
+                              width: 100,
+                              height: 30,
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .subtitle2
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                  ),
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 1,
+                              ),
+                              borderRadius: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

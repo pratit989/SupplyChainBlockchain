@@ -56,6 +56,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Buyer',
       'hi': 'क्रेता',
     },
+    '2jphwi18': {
+      'en': 'Select App Language:',
+      'hi': '',
+    },
+    'hmkp2zk0': {
+      'en': 'English',
+      'hi': 'अंग्रेज़ी',
+    },
+    'ygds3pda': {
+      'en': 'Hindi',
+      'hi': '',
+    },
     'b5t8ffeo': {
       'en': 'Home',
       'hi': 'घर',
