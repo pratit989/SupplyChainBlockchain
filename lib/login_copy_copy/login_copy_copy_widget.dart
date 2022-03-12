@@ -14,6 +14,7 @@ class LoginCopyCopyWidget extends StatefulWidget {
 class _LoginCopyCopyWidgetState extends State<LoginCopyCopyWidget> {
   TextEditingController textController1;
   TextEditingController textController2;
+  bool passwordVisibility;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -21,6 +22,7 @@ class _LoginCopyCopyWidgetState extends State<LoginCopyCopyWidget> {
     super.initState();
     textController1 = TextEditingController();
     textController2 = TextEditingController();
+    passwordVisibility = false;
   }
 
   @override
@@ -96,7 +98,7 @@ class _LoginCopyCopyWidgetState extends State<LoginCopyCopyWidget> {
                     ),
                     child: TextFormField(
                       controller: textController2,
-                      obscureText: false,
+                      obscureText: !passwordVisibility,
                       decoration: InputDecoration(
                         hintText: 'Password',
                         enabledBorder: UnderlineInputBorder(
@@ -117,6 +119,18 @@ class _LoginCopyCopyWidgetState extends State<LoginCopyCopyWidget> {
                           borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(4.0),
                             topRight: Radius.circular(4.0),
+                          ),
+                        ),
+                        suffixIcon: InkWell(
+                          onTap: () => setState(
+                            () => passwordVisibility = !passwordVisibility,
+                          ),
+                          child: Icon(
+                            passwordVisibility
+                                ? Icons.visibility_outlined
+                                : Icons.visibility_off_outlined,
+                            color: Color(0xFF757575),
+                            size: 22,
                           ),
                         ),
                       ),

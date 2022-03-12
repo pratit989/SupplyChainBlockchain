@@ -15,6 +15,7 @@ class LoginWidget extends StatefulWidget {
 class _LoginWidgetState extends State<LoginWidget> {
   TextEditingController textController1;
   TextEditingController textController2;
+  bool passwordVisibility;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -22,6 +23,7 @@ class _LoginWidgetState extends State<LoginWidget> {
     super.initState();
     textController1 = TextEditingController();
     textController2 = TextEditingController();
+    passwordVisibility = false;
   }
 
   @override
@@ -97,7 +99,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                     ),
                     child: TextFormField(
                       controller: textController2,
-                      obscureText: false,
+                      obscureText: !passwordVisibility,
                       decoration: InputDecoration(
                         hintText: 'Password',
                         enabledBorder: UnderlineInputBorder(
@@ -118,6 +120,18 @@ class _LoginWidgetState extends State<LoginWidget> {
                           borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(4.0),
                             topRight: Radius.circular(4.0),
+                          ),
+                        ),
+                        suffixIcon: InkWell(
+                          onTap: () => setState(
+                            () => passwordVisibility = !passwordVisibility,
+                          ),
+                          child: Icon(
+                            passwordVisibility
+                                ? Icons.visibility_outlined
+                                : Icons.visibility_off_outlined,
+                            color: Color(0xFF757575),
+                            size: 22,
                           ),
                         ),
                       ),
