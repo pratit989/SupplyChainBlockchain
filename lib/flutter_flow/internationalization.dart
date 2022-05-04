@@ -71,13 +71,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ProductInfo
   {
-    'xz0hrn25': {
+    'c293g7o7': {
       'en': 'SupplyChain Info',
       'hi': '',
     },
     'nsn9fp0k': {
       'en': 'Home',
       'hi': 'घर',
+    },
+  },
+  // DataViewer
+  {
+    '98xt4nfu': {
+      'en': 'Data Viewer',
+      'hi': '',
+    },
+    'jz896pl1': {
+      'en': 'Home',
+      'hi': '',
+    },
+  },
+  // Miscellaneous
+  {
+    's8c7oz4r': {
+      'en': '',
+      'hi': '',
     },
   },
 ].reduce((a, b) => a..addAll(b));
