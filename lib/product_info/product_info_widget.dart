@@ -1,5 +1,6 @@
 import '../backend/backend.dart';
 import '../components/info_card_widget.dart';
+import '../data_viewer/data_viewer_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -135,13 +136,25 @@ class _ProductInfoWidgetState extends State<ProductInfoWidget> {
                                   );
                                 }
                                 final infoCardBlocksRecord = snapshot.data;
-                                return InfoCardWidget(
-                                  productName:
-                                      productInfoProductsRecord.productName,
-                                  productID:
-                                      productInfoProductsRecord.productId,
-                                  blockIndex: infoCardBlocksRecord.index,
-                                  timestamp: infoCardBlocksRecord.timestamp,
+                                return InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => DataViewerWidget(
+                                          blockRef: blockItem,
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                  child: InfoCardWidget(
+                                    productName:
+                                        productInfoProductsRecord.productName,
+                                    productID:
+                                        productInfoProductsRecord.productId,
+                                    blockIndex: infoCardBlocksRecord.index,
+                                    timestamp: infoCardBlocksRecord.timestamp,
+                                  ),
                                 );
                               },
                             ),

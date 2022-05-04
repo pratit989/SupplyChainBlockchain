@@ -71,7 +71,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ProductInfo
   {
-    'c293g7o7': {
+    'h07hemc4': {
       'en': 'SupplyChain Info',
       'hi': '',
     },
@@ -82,11 +82,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // DataViewer
   {
-    '98xt4nfu': {
+    'vro8wzly': {
       'en': 'Data Viewer',
       'hi': '',
     },
-    'jz896pl1': {
+    'zgw4s1ic': {
       'en': 'Home',
       'hi': '',
     },
