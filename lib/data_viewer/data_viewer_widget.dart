@@ -59,7 +59,9 @@ class _DataViewerWidgetState extends State<DataViewerWidget> {
               },
             ),
             title: Text(
-              'Data Viewer',
+              FFLocalizations.of(context).getText(
+                'toz52mf7' /* Data Viewer */,
+              ),
               style: FlutterFlowTheme.of(context).title2.override(
                     fontFamily: 'Open Sans',
                     color: Colors.white,

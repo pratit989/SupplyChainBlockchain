@@ -72,7 +72,9 @@ class _ProductInfoWidgetState extends State<ProductInfoWidget> {
               },
             ),
             title: Text(
-              'SupplyChain Info',
+              FFLocalizations.of(context).getText(
+                'qlj4g6jx' /* SupplyChain Info */,
+              ),
               style: FlutterFlowTheme.of(context).title2.override(
                     fontFamily: 'Open Sans',
                     color: Colors.white,
@@ -87,83 +89,102 @@ class _ProductInfoWidgetState extends State<ProductInfoWidget> {
           body: SafeArea(
             child: GestureDetector(
               onTap: () => FocusScope.of(context).unfocus(),
-              child: StreamBuilder<BlockchainsRecord>(
-                stream: BlockchainsRecord.getDocument(
-                    productInfoProductsRecord.blockchain),
-                builder: (context, snapshot) {
-                  // Customize what your widget looks like when it's loading.
-                  if (!snapshot.hasData) {
-                    return Center(
-                      child: SizedBox(
-                        width: 50,
-                        height: 50,
-                        child: CircularProgressIndicator(
-                          color: FlutterFlowTheme.of(context).primaryColor,
-                        ),
-                      ),
-                    );
-                  }
-                  final listViewBlockchainsRecord = snapshot.data;
-                  return Builder(
-                    builder: (context) {
-                      final block = listViewBlockchainsRecord.blocksList
-                              .toList()
-                              ?.toList() ??
-                          [];
-                      return ListView.builder(
-                        padding: EdgeInsets.zero,
-                        scrollDirection: Axis.vertical,
-                        itemCount: block.length,
-                        itemBuilder: (context, blockIndex) {
-                          final blockItem = block[blockIndex];
-                          return Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
-                            child: StreamBuilder<BlocksRecord>(
-                              stream: BlocksRecord.getDocument(blockItem),
-                              builder: (context, snapshot) {
-                                // Customize what your widget looks like when it's loading.
-                                if (!snapshot.hasData) {
-                                  return Center(
-                                    child: SizedBox(
-                                      width: 50,
-                                      height: 50,
-                                      child: CircularProgressIndicator(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                      ),
-                                    ),
-                                  );
-                                }
-                                final infoCardBlocksRecord = snapshot.data;
-                                return InkWell(
-                                  onTap: () async {
-                                    await Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => DataViewerWidget(
-                                          blockRef: blockItem,
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height * 0.8,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFEEEEEE),
+                    ),
+                    child: StreamBuilder<BlockchainsRecord>(
+                      stream: BlockchainsRecord.getDocument(
+                          productInfoProductsRecord.blockchain),
+                      builder: (context, snapshot) {
+                        // Customize what your widget looks like when it's loading.
+                        if (!snapshot.hasData) {
+                          return Center(
+                            child: SizedBox(
+                              width: 50,
+                              height: 50,
+                              child: CircularProgressIndicator(
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
+                              ),
+                            ),
+                          );
+                        }
+                        final listViewBlockchainsRecord = snapshot.data;
+                        return Builder(
+                          builder: (context) {
+                            final block = listViewBlockchainsRecord.blocksList
+                                    .toList()
+                                    ?.toList() ??
+                                [];
+                            return ListView.builder(
+                              padding: EdgeInsets.zero,
+                              scrollDirection: Axis.vertical,
+                              itemCount: block.length,
+                              itemBuilder: (context, blockIndex) {
+                                final blockItem = block[blockIndex];
+                                return Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      10, 10, 10, 10),
+                                  child: StreamBuilder<BlocksRecord>(
+                                    stream: BlocksRecord.getDocument(blockItem),
+                                    builder: (context, snapshot) {
+                                      // Customize what your widget looks like when it's loading.
+                                      if (!snapshot.hasData) {
+                                        return Center(
+                                          child: SizedBox(
+                                            width: 50,
+                                            height: 50,
+                                            child: CircularProgressIndicator(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
+                                            ),
+                                          ),
+                                        );
+                                      }
+                                      final infoCardBlocksRecord =
+                                          snapshot.data;
+                                      return InkWell(
+                                        onTap: () async {
+                                          await Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  DataViewerWidget(
+                                                blockRef: blockItem,
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                        child: InfoCardWidget(
+                                          productName: productInfoProductsRecord
+                                              .productName,
+                                          productID: productInfoProductsRecord
+                                              .productId,
+                                          blockIndex:
+                                              infoCardBlocksRecord.index,
+                                          timestamp:
+                                              infoCardBlocksRecord.timestamp,
+                                          validation: true,
                                         ),
-                                      ),
-                                    );
-                                  },
-                                  child: InfoCardWidget(
-                                    productName:
-                                        productInfoProductsRecord.productName,
-                                    productID:
-                                        productInfoProductsRecord.productId,
-                                    blockIndex: infoCardBlocksRecord.index,
-                                    timestamp: infoCardBlocksRecord.timestamp,
+                                      );
+                                    },
                                   ),
                                 );
                               },
-                            ),
-                          );
-                        },
-                      );
-                    },
-                  );
-                },
+                            );
+                          },
+                        );
+                      },
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

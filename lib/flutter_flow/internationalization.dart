@@ -46,15 +46,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'xl3b11hc': {
       'en': 'Tap to Scan',
-      'hi': '',
+      'hi': 'स्कैन करने के लिए टैप करें',
     },
     '2ezkbz7p': {
       'en': 'Cancel',
-      'hi': '',
+      'hi': 'रद्द करना',
     },
     '0gllf474': {
       'en': 'Select App Language:',
-      'hi': '',
+      'hi': 'ऐप भाषा चुनें:',
     },
     'hmkp2zk0': {
       'en': 'English',
@@ -71,9 +71,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ProductInfo
   {
-    'h07hemc4': {
+    'qlj4g6jx': {
       'en': 'SupplyChain Info',
-      'hi': '',
+      'hi': 'आपूर्ति श्रृंखला जानकारी',
     },
     'nsn9fp0k': {
       'en': 'Home',
@@ -82,13 +82,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // DataViewer
   {
-    'vro8wzly': {
+    'toz52mf7': {
       'en': 'Data Viewer',
-      'hi': '',
+      'hi': 'डेटा व्यूअर',
     },
-    'zgw4s1ic': {
+    'qmyzw4e5': {
       'en': 'Home',
-      'hi': '',
+      'hi': 'घर',
     },
   },
   // Miscellaneous

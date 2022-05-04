@@ -10,12 +10,14 @@ class InfoCardWidget extends StatefulWidget {
     this.productID,
     this.timestamp,
     this.blockIndex,
+    this.validation,
   }) : super(key: key);
 
   final String productName;
   final String productID;
   final DateTime timestamp;
   final int blockIndex;
+  final bool validation;
 
   @override
   _InfoCardWidgetState createState() => _InfoCardWidgetState();
@@ -95,6 +97,8 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
             ),
             Column(
               mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
                   widget.blockIndex.toString(),
@@ -103,6 +107,17 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                         fontSize: 20,
                       ),
                 ),
+                Icon(
+                  Icons.check,
+                  color: Colors.black,
+                  size: 24,
+                ),
+                if (widget.validation ?? true)
+                  Icon(
+                    Icons.close,
+                    color: Colors.black,
+                    size: 24,
+                  ),
               ],
             ),
           ],
