@@ -1,4 +1,4 @@
-package com.flutterflow.blockchainsupplychain
+package com.supplychainblockchain.customer
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -26,14 +26,26 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-
+	<key>CFBundleURLTypes</key>
+	<array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.googleusercontent.apps.234209236609-0j6nkni6c1eav4mvdlfoklr811igd0dn</string>
+                
+            </array>
+        </dict>
+    </array>
 
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 
-
+	<key>NSCameraUsageDescription</key>
+	<string>In order to scan for barcodes and QR codes, this app requires permission to access the camera.</string>
 
 
 	<key>UILaunchStoryboardName</key>
